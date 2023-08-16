@@ -225,6 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EducationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -239,6 +240,17 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Services\Index.cshtml" />
+    <Content Include="Views\Education\Education1.cshtml" />
+    <Content Include="Views\Services\services1.cshtml" />
+    <Content Include="Views\Services\service2.cshtml" />
+    <Content Include="Views\Services\service3.cshtml" />
+    <Content Include="Views\Services\service4.cshtml" />
+    <Content Include="Views\Services\service5.cshtml" />
+    <Content Include="Views\Services\service6.cshtml" />
+    <Content Include="Views\Services\service7.cshtml" />
+    <Content Include="Views\Services\service8.cshtml" />
+    <Content Include="Views\Services\service9.cshtml" />
+    <Content Include="Views\Services\service10.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

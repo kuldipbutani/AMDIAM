@@ -10,7 +10,7 @@
 
     <!-- tailwinds css  -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src=".~/js/tailwind.config.js"></script>
+    <script src="~/js/tailwind.config.js"></script>
 
     <!-- Fontawesome -->
     <link rel="stylesheet"
@@ -28,7 +28,7 @@
     <style>
         /* CSS for active item */
         .active-item {
-            background: linear-gradient( 90deg, #ca6b9d 0%, rgba(4, 2, 20, 0.38) 100% );
+            background: linear-gradient(90deg, #CA6B9D 0%, rgba(4, 2, 20, 0.38) 100%);
             width: 135px;
             height: 4px;
             flex-shrink: 0;
@@ -36,8 +36,9 @@
     </style>
 </head>
 <body>
-    <div class="bg-[#020014]">
+    <div class="bg-[#020014] ">
         <!-- navbar  -->
+
 
         <div class="flex lg:hidden sticky top-0 z-[11] bg-[#020014] items-center justify-between py-5 px-4">
             <p class="text-white lg:hidden">AHMD</p>
@@ -58,13 +59,13 @@
         <nav class="z-10 lg:relative md:relative absolute top-20 md:top-3 py-7 lg:py-0 lg:top-0 bg-white lg:bg-[#020014] lg:flex hidden w-full justify-between items-center xl:px-40 lg:px-28 !selection:select-none"
              id="menu">
             <div class="flex flex-col lg:flex-row gap-5 lg:gap-14 items-center lg:text-white">
-                <a href="~/home/Index"> <p class=" hover:text-[#B76E79] font-semibold cursor-pointer block">Home</p></a>
-                <a href="~/home/about"><p class="hover:text-[#B76E79] cursor-pointer font-semibold block">About</p></a>
+                <a href="index"> <p class=" hover:text-[#B76E79] font-semibold cursor-pointer block">Home</p></a>
+                <a href="about"><p class="hover:text-[#B76E79] cursor-pointer font-semibold block">About</p></a>
 
 
                 <div class="dropdown inline-block relative z-[111]">
                     <button class="font-semibold py-2  rounded inline-flex items-center">
-                        <a href="service"><span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Services</span></a>
+                        <a href="service"><span class="mr-1 lg:text-[#B76E79] cursor-pointer font-semibold block">Services</span></a>
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
                     </button>
                     <ul class="dropdown-menu absolute hidden text-gray-700 pt-1 " style="width: max-content;">
@@ -94,11 +95,11 @@
             <div class="flex flex-col lg:flex-row gap-5 lg:gap-14 items-center lg:text-white mt-5 lg:m-0">
                 <div class="dropdown inline-block  relative z-[11]">
                     <button class="font-semibold py-2  rounded inline-flex items-center">
-                        <a href=""><span class="mr-1 lg:text-[#B76E79] cursor-pointer font-semibold block">Education</span></a>
+                        <a href=""><span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Education</span></a>
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
                     </button>
                     <ul class="dropdown-menu absolute hidden text-gray-700 pt-1 " style="width: max-content;">
-                        <li class=""><a class="rounded-t-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="~/Education/Education1">DIAMOND 4C'S</a></li>
+                        <li class=""><a class="rounded-t-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="education1">DIAMOND 4C'S</a></li>
                         <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="education2">HISTORY OF THE DIAMOND</a></li>
                         <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="education3">HOW DIAMONDS ARE FORMED</a></li>
                         <li class=""><a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="education4">DIAMOND CERTIFICATION</a></li>
@@ -133,199 +134,52 @@
 
         <div class="relative w-full ">
             <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
-            <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center md:px-28 px-5 justify-between">
-                <p class="text-white text-center">DIAMOND 4C'S</p>
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center md:px-24 px-5 justify-between">
+                <p class="text-white text-center">SECURITY SEALS</p>
                 <p class="md:text-base text-sm text-[#A8A5A5]">
-                    Home /
-                    <span class="text-white md:text-lg text-sm">DIAMOND 4C'S</span>
+                    Home / <span class="text-white md:text-lg text-sm">SECURITY SEALS</span>
                 </p>
             </div>
         </div>
 
-        <div class="md:px-28 px-10 my-10">
-            <div class="flex flex-col gap-y-10 text-white">
-                <div class="flex flex-col gap-y-5">
-                    <p class="text-3xl font-semibold">THE FOUR C'S OF DIAMONDS</p>
 
-                    <p class="text-base font-normal">
-                        When you are planning on purchasing a diamond it is important that
-                        you know as much as possible about how diamonds are classified.
-                        There are four topics you need to become familiar with: cut,
-                        color, clarity, and carat weight.
-                    </p>
+
+
+
+        <div class="my-10 md:px-28 px-10 ">
+
+
+            <div class="grid md:grid-cols-3 grid-cols-1  gap-20  text-white">
+                <div class="flex">
+                    <img src="~/img/service8.png" alt="">
                 </div>
-                <div class="flex flex-col gap-y-5 py-7">
-                    <p class="text-3xl font-semibold">DIAMOND CUT</p>
+                <div class="flex col-span-2 flex-col gap-y-7">
 
-                    <p class="text-base font-normal">
-                        When we speak of cut we are more interested in the proportions of the diamond as opposed to its shape (Round Brilliant,
-                        Marquise, Pear, Princess, etc.) Every diamond regardless of its shape gets it brilliancy and scintillation by cutting and
-                        polishing the diamond facets to allow the maximum amount of light that enters through its top to be reflected and dispersed
-                        back through its top.
+
+
+                    <p class="text-3xl text-justify">TAMPER-PROOF SEALING.</p>
+
+                    <p class="text-base text-justify">We ensure that a given grading report and the corresponding diamond stay together with our tamper-proof sealing, which keeps the diamond safe from oil and dirt.</p>
+
+
+                    <p class="text-base text-justify">
+                        As per request, we seal your diamond in a secure tamper-proof container.
+                        The associated IGI Diamond Report is enclosed within the seal, which is
+                        visible from the back of the seal. Once opened, the Seal will show a
+                        chemically generated pattern,evidencing that the seal has been broken.
                     </p>
-                    <p class="text-base font-normal">
-                        As you can see if the angles are correct the light that enters is dispersed properly back through the diamond's top facets. When a stone is cut too shallow or too deep the light that enters through the top is allowed to escape through the diamond's bottom and does not allow the maximum beauty of the diamond to be realized.
-                    </p>
-                </div>
 
 
-                <div class="grid lg:grid-cols-9 md:grid-cols-6 grid-cols-4  gap-5 ">
-                    <div class="">
-                        <img src="~/img/dm1.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm2.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm3.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm4.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm5.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm6.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm7.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm8.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dm9.png" alt="">
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-y-5 py-7">
-                    <p class="text-3xl font-semibold">DIAMOND COLOR</p>
-
-                    <p class="text-base font-normal">
-                        Diamonds come naturally in every color of the rainbow. However most people are concerned with diamonds in the white range. The Gemological Institute of America (GIA) rates the body color in white diamonds from D (colorless) to Z (light yellow).
-                    </p>
-                    <p class="text-base font-normal">
-                        The best color for a diamond is no color at all. A totally colorless diamond allows light to pass through it easily, resulting in the light being dispersed as the color of the rainbow. Colors are graded totally colorless to light yellow. The differences from one grade to the other are very subtle and it takes a trained eye and years of experience to color grade a diamond.
-                    </p>
-                </div>
 
 
-                <div class="grid lg:grid-cols-6 md:grid-cols-4 grid-cols-3  gap-5 ">
-                    <div class="">
-                        <img src="~/img/asset 11.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/asset 12.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/asset 13.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/asset 14.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/asset 15.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/asset 16.png" alt="">
-                    </div>
+
+
 
                 </div>
-
-                <div class="flex flex-col gap-y-5 py-7">
-                    <p class="text-3xl font-semibold">DIAMOND CLARITY CHART</p>
-
-                    <p class="text-base font-normal">
-                        The clarity of a diamond is determined by the amount and location of flaws, or blemishes, in the diamond when viewed under 10 power (10x) magnification. GIA rates clarity grades in diamonds from Flawless (FL-IF) to Imperfect 3 (I3).
-                    </p>
-                    <p class="text-base font-normal">
-                        Most diamonds contain very tiny birthmarks known as "inclusions." An inclusion can interfere with the light passing through the diamond. The fewer the inclusions, the more beautiful the diamond will be.
-                    </p>
-                    <p class="text-base font-normal">
-                        Diamonds have the capability of producing more brilliance than any other gemstone. A diamond that is free of inclusions and surface blemishes is very rare and therefore very valuable.
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-9 md:grid-cols-6 grid-cols-4  gap-5 ">
-                    <div class="">
-                        <img src="~/img/dc1.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc2.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc3.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc4.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc5.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc6.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc7.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc8.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc9.png" alt="">
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-y-5 py-7">
-                    <p class="text-3xl font-semibold">DIAMOND CARAT-WEIGHT</p>
-
-                    <p class="text-base font-normal">
-                        The weight of a diamond is measured in carats. As the carat weight of a diamond increases so does its rarity and therefore its price.
-                    </p>
-                    <p class="text-base font-normal">
-                        One carat is divided into 100 "points," so that a diamond of 75 points weights .75 carats. The carat-weight of a diamond is the easiest measurement to determine. Most importantly, two diamonds can be of equal carat-weight, but their value can differ greatly due to their cut, color, and clarity.
-                    </p>
-                    <p class="text-base font-normal">
-                        Don't rush into your diamond purchase. Take your time and evaluate your choice carefully. It took billions (yes, billions) of years for nature to form your diamond and the skill of a master diamond cutter to bring your diamond to you. The time you spend now can bring you a lifetime of pleasure, satisfaction, and happiness.
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-9 md:grid-cols-6 grid-cols-4  gap-5 ">
-                    <div class="">
-                        <img src="~/img/dc11.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc22.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc33.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc44.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc55.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc66.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc77.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc88.png" alt="">
-                    </div>
-                    <div class="">
-                        <img src="~/img/dc99.png" alt="">
-                    </div>
-                </div>
-
-
             </div>
 
 
-
+            <!-- news later  -->
             <div class=" w-full">
                 <div class="newslater lg:h-[120px] w-full items-center  gap-5 justify-between p-5 flex md:px-10   my-16">
                     <p class="text-2xl font-bold">
@@ -337,7 +191,7 @@
                             <input type="text"
                                    class="h-[50px] rounded-md px-3"
                                    placeholder="Your E-mail" />
-                            <a href="~/home/Index">
+                            <a href="index">
                                 <button class="h-[50px] px-5 my-2 rounded-md border hover:border-2 border-[#B76E79]">
                                     Subscribe
                                 </button>
@@ -350,7 +204,12 @@
                 </div>
 
             </div>
+
+
+
         </div>
+
+
 
         <!-- footer section  -->
 
@@ -427,7 +286,7 @@
                     </div>
                     <div class="flex gap-3 items-center">
                         <i class="fas text-white fa-solid fa-chevron-right"></i>
-                        <a href="~/home/about"> <p class="text-[#E9E9E9] hover:text-[#B76E79]">ABOUT US</p></a>
+                        <a href="about"> <p class="text-[#E9E9E9] hover:text-[#B76E79]">ABOUT US</p></a>
                     </div>
                     <div class="flex gap-3 items-center">
                         <i class="fas text-white fa-solid fa-chevron-right"></i>
@@ -448,7 +307,7 @@
                         <i class="fa-brands fa-facebook text-xl"></i>
                         <p class="">Facebook</p>
                     </a>
-                    <a href="~/home/Index"
+                    <a href="index"
                        class="flex gap-3 text-white hover:text-[#B76E79]">
                         <i class="fa-brands fa-pinterest text-xl"></i>
                         <p class="">Pinterest</p>
@@ -477,16 +336,40 @@
         </p>
     </div>
 
+    <!-- tab view js  -->
+    <script>
+      function openTab(evt, tabName) {
+        var i, tabContent;
+        tabContent = document.getElementsByClassName("tab-content");
+
+        // Hide all tab content
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+
+        // Show the selected tab content
+        document.getElementById(tabName).style.display = "block";
+      }
+
+      // Show the first tab and hide the rest on page load
+      window.addEventListener("DOMContentLoaded", function () {
+        var tabContent = document.getElementsByClassName("tab-content");
+        for (var i = 1; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+      });
+    </script>
+
 
 
     <!-- navbar javascript  -->
     <script>
-      const button = document.querySelector("#menu-button");
-      const menu = document.querySelector("#menu");
+    const button = document.querySelector("#menu-button");
+    const menu = document.querySelector("#menu");
 
-      button.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
+    button.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
     </script>
 
     <!-- Tailwindcss Config -->
@@ -500,20 +383,7 @@
            'poppins': ['Poppins'],
         },
               screens: {
-                @*sm: "640px",
-                // => @media (min-width: 640px) { ... }
-
-                md: "768px",
-                // => @media (min-width: 768px) { ... }
-
-                lg: "1024px",
-                // => @media (min-width: 1024px) { ... }
-
-                xl: "1280px",
-                // => @media (min-width: 1280px) { ... }
-
-                "2xl": "1536px",
-                // => @media (min-width: 1536px) { ... }*@
+              
               },
             },
           },
@@ -522,6 +392,6 @@
     </script>
 
     <!-- JS File -->
-    <script src=".~/js/main.js"></script>
+    <script src="~/js/main.js"></script>
 </body>
 </html>
