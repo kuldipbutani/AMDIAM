@@ -13,5 +13,25 @@ namespace AMDIAM.Controllers
         {
             return View();
         }
+        public ActionResult Education2()
+        {
+            return View();
+        }
+        public ActionResult Education3()
+        {
+            return View();
+        }
+        public ActionResult Education4()
+        {
+            return View();
+        }
+        public ActionResult Education5()
+        {
+            return View();
+        }
+        public ActionResult Education6()
+        {
+            return View();
+        }
     }
 }

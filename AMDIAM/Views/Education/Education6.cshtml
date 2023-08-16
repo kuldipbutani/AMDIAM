@@ -24,12 +24,22 @@
 
     <!-- css style  -->
     <link rel="stylesheet" href="~/css/style.css" />
+
+    <style>
+        /* CSS for active item */
+        .active-item {
+            background: linear-gradient( 90deg, #ca6b9d 0%, rgba(4, 2, 20, 0.38) 100% );
+            width: 135px;
+            height: 4px;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
-<body class="">
+<body>
     <div class="bg-[#020014] ">
         <!-- navbar  -->
-        <!-- navbar  -->
-        <div class="flex lg:hidden sticky top-0 z-[111] bg-[#020014] items-center justify-between py-5 px-4">
+
+        <div class="flex lg:hidden sticky top-0 z-[11] bg-[#020014] items-center justify-between py-5 px-4">
             <p class="text-white lg:hidden">AHMD</p>
             <div class="bg-white lg:hidden flex text-black rounded-lg p-2" id="menu-button">
                 <svg xmlns="http://www.w3.org/2000/svg"
@@ -48,8 +58,8 @@
         <nav class="z-10 lg:relative md:relative absolute top-20 md:top-3 py-7 lg:py-0 lg:top-0 bg-white lg:bg-[#020014] lg:flex hidden w-full justify-between items-center xl:px-40 lg:px-28 !selection:select-none"
              id="menu">
             <div class="flex flex-col lg:flex-row gap-5 lg:gap-14 items-center lg:text-white">
-                <a href="~/home/Index"> <p class=" hover:text-[#B76E79] font-semibold cursor-pointer block">Home</p></a>
-                <a href="~/home/about"><p class="lg:text-[#B76E79] cursor-pointer font-semibold block">About</p></a>
+                <a href="~/Home/Index"> <p class=" hover:text-[#B76E79] font-semibold cursor-pointer block">Home</p></a>
+                <a href="~/home/about"><p class="hover:text-[#B76E79] cursor-pointer font-semibold block">About</p></a>
 
 
                 <div class="dropdown inline-block relative z-[111]">
@@ -78,13 +88,13 @@
 
 
             <div class="lg:flex flex-col lg:flex-row gap-5 lg:gap-14 hidden">
-                <img src="~/img/logo.png" alt="" class="h-[100px] py-2" />
+                <img src="~/img/logo.png" alt="" class="h-[100px]  py-2" />
             </div>
 
             <div class="flex flex-col lg:flex-row gap-5 lg:gap-14 items-center lg:text-white mt-5 lg:m-0">
                 <div class="dropdown inline-block  relative z-[11]">
                     <button class="font-semibold py-2  rounded inline-flex items-center">
-                        <a href=""><span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Education</span></a>
+                        <a href=""><span class="mr-1 lg:text-[#B76E79] cursor-pointer font-semibold block">Education</span></a>
                         <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /> </svg>
                     </button>
                     <ul class="dropdown-menu absolute hidden text-gray-700 pt-1 " style="width: max-content;">
@@ -115,174 +125,110 @@
                 </div>
 
                 <!-- <p class="hover:text-[#B76E79] cursor-pointer block font-semibold">Contact</p> -->
-
                 <a href="login.html"><span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Login</span></a>
             </div>
         </nav>
 
         <!-- HERO containt  -->
 
-        <div class="">
-            <img src="~/img/aboutus.png" alt="" class="w-full h-[630px] object-cover" />
+        <div class="relative w-full ">
+            <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center md:px-28 px-5 justify-between">
+                <p class="text-white text-center">CONFLICT-FREE DIAMONDS</p>
+                <p class="md:text-base text-sm text-[#A8A5A5]">
+                    Home /
+                    <span class="text-white md:text-lg text-sm">CONFLICT-FREE DIAMONDS</span>
+                </p>
+            </div>
         </div>
 
-        <!-- main containt  -->
+        <div class="md:px-28 px-10 my-10">
+            <div class="flex flex-col gap-y-10 text-white">
+                <div class="flex flex-col gap-y-5">
 
-        <div class="flex flex-col justify-center items-center py-7 md:px-20 px-10">
-            <!-- service cards  -->
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-20 py-10 text-white">
-                <div class="card p-5 flex flex-col items-center h-[320px] w-[275px]">
-                    <img src="~/img/activityicon.png"
-                         alt=""
-                         class="h-[70px] w-[70px]" />
-                    <p class="py-5 text-lg uppercase">Our Activity</p>
-                    <p class="text-[#C6C6C6] text-center">
-                        Wholesalers, manufacturers and expert colored gemstone specialists
+                    <p class="text-base font-normal">
+                        The most important criteria, even before the other 5Cs, while buying a diamond is the 6th C – that it should be conflict-free. In 2002, the UN along with a coalition of governments and non-governmental organizations adopted a system – the Kimberley Process – to end the practice of diamond trading that involved any form of conflict. They wanted to make sure every diamond traded has been mined and shipped in a humane, environmentally conscious, conflict-free and legitimate way. Today, 99 percent of the diamonds that are traded around the world are conflict-free. The most important thing is to ensure the diamond has documentation all the way from the mine to the market. AM Diam specialises in conflict-free diamonds, and will be able to produce the Kimberley Process certificate with each diamond you purchase.
                     </p>
                 </div>
-                <div class="card p-5 flex flex-col items-center h-[320px] w-[275px]">
-                    <img src="~/img/productsicon.png"
-                         alt=""
-                         class="h-[70px] w-[70px]" />
-                    <p class="py-5 text-lg uppercase">Our Products</p>
-                    <p class="text-[#C6C6C6] text-center">
-                        Rough diamonds, cut diamonds, coloured gemstones (rubies,
-                        sapphires, emeralds), custom-made jewellery
+                <div class="flex flex-col gap-y-5 py-7">
+                    <p class="text-3xl font-semibold">WHAT ARE CONFLICT-FREE DIAMONDS?</p>
+
+                    <p class="text-base font-normal">
+                        Diamonds that are sold illegally to finance war and terror; those that have been mined by abusing labourers and with some form of criminal activity involved are called conflict diamonds or blood diamonds. These diamonds most come from rogue operators in African countries, but with criminal operators part of the supply chain, they can easily end up anywhere in the world. By purchasing blood diamonds, you are fueling criminal activity in the world. Conflict-free diamonds in contrast, are those diamonds that have been ethically mined and sold, through a full-proof supply chain, and unassociated to any labour abuse or crime.
                     </p>
                 </div>
-                <div class="card p-5 flex flex-col items-center h-[320px] w-[275px]">
-                    <img src="~/img/serviceicon.png"
-                         alt=""
-                         class="h-[70px] w-[70px]" />
-                    <p class="py-5 text-lg uppercase">Our Services</p>
-                    <p class="text-[#C6C6C6] text-center">
-                        Specialized in cutting and polishing rough diamonds as well as in
-                        manufacturing high-end finished jewelry.
+                <div class="flex flex-col gap-y-5 py-7">
+                    <p class="text-3xl font-semibold">CONFLICT-FREE DIAMONDS AND ITS HISTORY</p>
+
+                    <p class="text-base font-normal">
+                        Blood diamonds have been around for decades, but they really came under the international spotlight during the 1900s when the Sierra Leone civil war occurred. For nine years rebel groups used horrific tactics like rape, mutilation and financed this crime with the smuggling and selling od diamonds. The war resulted in more than 75,000 deaths and 2 million people being displaced – and brought the outrageous reality of blood diamonds to the world’s attention. This along with the Angola war, which was also financed by blood diamonds, and other atrocities linked to diamonds, gave the world enough reason to bring a stop to all of this. That is when the Kimberley Process came to life.
                     </p>
                 </div>
+
+                <div class="flex justify-center items-center">
+                    <img src="~/img/education6.png" alt="" class="w-full" />
+                </div>
+
+                <div class="flex flex-col gap-y-5 py-7">
+                    <p class="text-3xl font-semibold">UNDERSTANDING THE KIMBERLEY PROCESS</p>
+
+                    <p class="text-base font-normal">
+                        The Kimberley Process is an international alliance of around 80 countries who pledged to engage in diamond trade only with countries who agreed to the terms and conditions of the alliance. In 2000, much of the diamond industry partnered with the United Nations and other organizations to create the Kimberley Process Certification. This requires the country to closely monitor and officially audit incoming diamonds from the time they are mined to its final sale. When the shipment enters the country, it is given a Kimberley Process certificate that verifies the diamonds to be conflict free. Import and export of rough diamonds is only allowed between Kimberley Process member countries. Every diamond imported or exported must carry with it a Kimberley Process Certificate, sealed in a tamper-free container. Without this certificate, the said shipment is not permitted to enter or leave the Kimberley Process member country. The goal of this system was to positively improve the working conditions for miners and bring to a halt diamond sale proceeds going to outlaw forces that promote war and violence. During the time of the Sierra Leone civil war, conflict diamonds accounted for about 4% of the total diamond production . Today, this number has successfully dropped to less than 1%. While choosing the right cut, colour, carat and clarity is important, there’s nothing more crucial than knowing whether your diamond is conflict free or not.
+                    </p>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="relative  my-10">
+            <img src="~/img/navdownlight.jpg" alt="" class="w-screen">
+            <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col gap-y-5 items-center justify-center ">
+                <p class="text-2xl text-white font-semibold lg:mt-10 mt-10">EXPERT ADVICE</p>
+                <p class="text-white text-center font-light md:text-base text-xs md:px-28 px-5">Keeping in mind that buying and selling diamonds is complex process, we understand that qualified experience is essential. You may or may not have the accurate information or knowledge of making an informed decision, and getting the best value for your diamonds. At AM DIAM DMCC, you can be assured of receiving the best value for your diamonds thanks to our experience in valuing and buying diamonds.  We have gained the expertise and knowledge needed to offer you the highest prices for your diamonds. You can book an appointment, free and benefit from our trustworthy experts on your every transaction.</p>
             </div>
 
-            <!-- about section  -->
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20  mt-20 lg:px-20 px-10">
-                <div class="">
-                    <p class="text-[#E4E2E2] text-xl text-justify
-             font-extralight">
-                        Our team at AM DIAM is made up of international diamond and colored gemstone specialists. We are specialized in cutting and polishing rough diamonds as well as in manufacturing high-end
-                        finished jewellery.
-                    </p>
-                </div>
-                <div class="flex gap-x-20">
-                    <div class="flex flex-col gap-y-4 ">
-                        <p class="text-lg text-white">WE MANUFACTURE IN:</p>
 
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/bel.png"
-                                 alt=""
-                                 class="h-[20px] w-[20px]" />
-                            <p class="font-semibold">BELGIUM</p>
-                        </div>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/hong.png"
-                                 alt=""
-                                 class="h-[20px] w-[20px]" />
-                            <p class="font-semibold">HONG KONG</p>
-                        </div>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/india.png"
-                                 alt=""
-                                 class="h-[18px] w-[20px]" />
-                            <p class="font-semibold">INDIA</p>
-                        </div>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/uae.png"
-                                 alt=""
-                                 class="h-[18px] w-[20px]" />
-                            <p class="font-semibold">U.A.E</p>
-                        </div>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/usa.png"
-                                 alt=""
-                                 class="h-[18px] w-[20px]" />
-                            <p class="font-semibold">U.S.A</p>
-                        </div>
+        </div>
+
+        <div class="flex justify-center text-white py-5">
+            <a href="contact.html" class="button2 py-1 px-5 text-base border border-white">
+                Contact Us
+            </a>
+        </div>
+
+        <!-- news later  -->
+        <div class="md:px-28 px-10 w-full">
+            <div class="newslater lg:h-[120px] w-full items-center  gap-5 justify-between p-5 flex md:px-10   my-16">
+                <p class="text-2xl font-bold">
+                    Subscribe to Our
+                    Newsletter
+                </p>
+                <div class="flex flex-col items-center  ">
+                    <div class="lg:flex items-center gap-3">
+                        <input type="text"
+                               class="h-[50px] rounded-md px-3"
+                               placeholder="Your E-mail" />
+                        <a href="~/Home/Index">
+                            <button class="h-[50px] px-5 my-2 rounded-md border hover:border-2 border-[#B76E79]">
+                                Subscribe
+                            </button>
+                        </a>
                     </div>
-                    <div class="flex flex-col gap-y-4 ">
-                        <p class="text-lg text-white">WHAT WE OFFER:</p>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/dimondround.png"
-                                 alt=""
-                                 class="h-[18px] w-[18px]" />
-                            <p class="">High-end finished jewelry.</p>
-                        </div>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/dimondround.png"
-                                 alt=""
-                                 class="h-[18px] w-[18px]" />
-                            <p class="">Cutting and polishing diamonds.</p>
-                        </div>
-                        <div class="flex text-white text-sm items-center gap-3">
-                            <img src="~/img/dimondround.png"
-                                 alt=""
-                                 class="h-[18px] w-[18px]" />
-                            <p class="">Polishing colour stones.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="relative w-screen   my-10  ">
-                <img src="~/img/navdownlight.jpg" alt="" class="lighttext w-screen">
-                <div class="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center  md:px-0 px-0">
-                    <p class="text-white text-center px-10 md:w-1/3 font-semibold md:text-xl text-sm ">You are welcome to visit us at our Dubai office, where we will present you with a wide range of diamonds and other precious stones specially selected for your budget.</p>
-                </div>
-            </div>
-
-
-
-            <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 mb-10">
-                <div class="">
-                    <img src="~/img/about2.png" alt="">
-                </div>
-                <div class="">
-                    <img src="~/img/about1.png" alt="">
-                </div>
-
-            </div>
-
-            <!-- news later  -->
-            <div class="px-20 w-full">
-                <div class="newslater lg:h-[120px] w-full items-center  gap-5 justify-between p-5 flex md:px-10  my-10">
-                    <p class="text-2xl font-bold">
-                        Subscribe to Our
-                        Newsletter
+                    <p class="text-sm text-[#E9E9E9]">
+                        Discover the latest collections, news and exclusive launches.
                     </p>
-                    <div class="flex flex-col items-center  ">
-                        <div class="lg:flex items-center gap-3">
-                            <input type="text"
-                                   class="h-[50px] rounded-md px-3"
-                                   placeholder="Your E-mail" />
-                            <a href="~/home/Index">
-                                <button class="h-[50px] px-5 my-2 rounded-md border hover:border-2 border-[#B76E79]">
-                                    Subscribe
-                                </button>
-                            </a>
-                        </div>
-                        <p class="text-sm text-[#E9E9E9]">
-                            Discover the latest collections, news and exclusive launches.
-                        </p>
-                    </div>
                 </div>
-
             </div>
-
-
-
-
 
         </div>
 
         <!-- footer section  -->
+
 
         <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-10 w-full lg:px-40 px-20 py-10 mt-20 justify-items-center">
             <div class="flex flex-col gap-y-7 ">
@@ -378,7 +324,7 @@
                         <i class="fa-brands fa-facebook text-xl"></i>
                         <p class="">Facebook</p>
                     </a>
-                    <a href="~/home/Index"
+                    <a href="~/Home/Index"
                        class="flex gap-3 text-white hover:text-[#B76E79]">
                         <i class="fa-brands fa-pinterest text-xl"></i>
                         <p class="">Pinterest</p>
@@ -399,35 +345,34 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="py-3 bg-[#24101B] px-20">
-            <p class="text-white font-medium">
-                AM Diam | Copyrights © 2023 All Rights Reserved
-            </p>
-        </div>
+    <div class="py-3 bg-[#24101B] px-20">
+        <p class="text-white font-medium">
+            AM Diam | Copyrights © 2023 All Rights Reserved
+        </p>
+    </div>
 
-
-
-
-        <!-- navbar javascript  -->
-        <script>
+    <!-- navbar javascript  -->
+    <script>
       const button = document.querySelector("#menu-button");
       const menu = document.querySelector("#menu");
 
       button.addEventListener("click", () => {
         menu.classList.toggle("hidden");
       });
-        </script>
+    </script>
 
-        <!-- Tailwindcss Config -->
-        <script>
+    <!-- Tailwindcss Config -->
+    <script>
       tailwind.config = {
         theme: {
           theme: {
             extends: {
+
               fontFamily: {
-                poppins: ["Poppins"],
-              },
+           'poppins': ['Poppins'],
+        },
               screens: {
                 @*sm: "640px",
                 // => @media (min-width: 640px) { ... }
@@ -448,9 +393,9 @@
           },
         },
       };
-        </script>
+    </script>
 
-        <!-- JS File -->
-        <script src="~/js/main.js"></script>
+    <!-- JS File -->
+    <script src="~/js/main.js"></script>
 </body>
 </html>
