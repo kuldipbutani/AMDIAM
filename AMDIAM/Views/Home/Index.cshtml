@@ -1,0 +1,902 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AM DIAM DMCC</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- tailwinds css  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src=".~/js/tailwind.config.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins"
+          rel="stylesheet" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- css style  -->
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    <style>
+        /* Replace [color] with the desired color name or hexadecimal code */
+        .swiper-pagination-bullet-active {
+            background-color: #fff; /* Active bullet background color */
+            color: #fff; /* Active bullet text color */
+        }
+
+        .swiper-pagination-bullet {
+            /* background-color: ;  */
+            box-shadow: 0 0 0 2px #b76e79; /* Outline color for inactive bullets */
+            margin: 5px; /* Adjust the margin between bullets as needed */
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 20px;
+            background-color: white;
+            color: #b76e79;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body class="">
+    <div class="bg-[#020014]">
+        <!-- navbar  -->
+        <div class="flex lg:hidden sticky top-0 bg-[#020014] z-[111] items-center justify-between py-5 px-4">
+            <p class="text-white lg:hidden">AHMD</p>
+            <div class="bg-white lg:hidden flex text-black rounded-lg p-2"
+                 id="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6 cursor-pointer lg:hidden block"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+        </div>
+
+        <nav class="z-10 lg:relative md:relative absolute top-20 md:top-3 py-7 lg:py-0 lg:top-0 bg-white lg:bg-[#020014] lg:flex hidden w-full justify-between items-center xl:px-40 lg:px-28 !selection:select-none"
+             id="menu">
+            <div class="flex flex-col lg:flex-row gap-5 lg:gap-14 items-center lg:text-white">
+                <a href="~/Home/Index">
+                    <p class="lg:text-[#B76E79] hover:text-[#B76E79] text-black font-semibold cursor-pointer block">
+                        Home
+                    </p>
+                </a>
+                <a href="~/Home/About">
+                    <p class="hover:text-[#B76E79] cursor-pointer font-semibold block">
+                        About
+                    </p>
+                </a>
+
+                <div class="dropdown inline-block relative z-[111]">
+                    <button class="font-semibold py-2 rounded inline-flex items-center">
+                        <a href="~/Services/service1">
+                            <span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Services</span>
+                        </a>
+                        <svg class="fill-current h-4 w-4"
+                             xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1"
+                        style="width: max-content">
+                        <li class="">
+                            <a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service1">DIAMOND SELLING SERVICE</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service2">DIAMOND SOURCING SERVICE</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service5">DM (DIAMOND MANUFACTURING)</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service6">AM DIAM FINANCE</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service7">FREE APPRAISAL AND SHIPPING</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service8">SECURITY SEALS</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service9">INVESTMENT DIAMONDS</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service10">FLEXIBLE PAYMENT OPTIONS</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service4">PARTNERS</a>
+                        </li>
+                        <li class="">
+                            <a class="rounded-b bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="~/Services/service3">CUSTOM WEB SOLUTIONS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="lg:flex flex-col lg:flex-row gap-5 lg:gap-14 hidden items-center justify-center">
+                <img src="~/img/logo.png" alt="" class="h-[100px] py-2" />
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-5 lg:gap-14 items-center lg:text-white mt-5 lg:m-0">
+                <div class="dropdown inline-block relative z-[11]">
+                    <button class="font-semibold py-2 rounded inline-flex items-center">
+                        <a href="">
+                            <span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Education</span>
+                        </a>
+                        <svg class="fill-current h-4 w-4"
+                             xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1"
+                        style="width: max-content">
+                        <li class="">
+                            <a class="rounded-t-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="education1">DIAMOND 4C'S</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="education2">HISTORY OF THE DIAMOND</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="education3">HOW DIAMONDS ARE FORMED</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="education4">DIAMOND CERTIFICATION</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="education5">FANCY COLOR DIAMONDS</a>
+                        </li>
+                        <li class="">
+                            <a class="rounded-b-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="education6">CONFLICT-FREE DIAMONDS</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dropdown inline-block relative">
+                    <button class="font-semibold py-2 rounded inline-flex items-center">
+                        <a href="">
+                            <span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Contact</span>
+                        </a>
+                        <svg class="fill-current h-4 w-4"
+                             xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 20 20">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu absolute hidden text-gray-700 pt-1"
+                        style="width: max-content">
+                        <li class="">
+                            <a class="rounded-t-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="contact">CONTACT US</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="career">CAREER</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="signup">CREATE AN ACCOUNT</a>
+                        </li>
+                        <li class="">
+                            <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="login">LOGIN</a>
+                        </li>
+                        <li class="">
+                            <a class="rounded-b-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
+                               href="passwordreset">FORGOT PASSWORD</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <p class="hover:text-[#B76E79] cursor-pointer block font-semibold">Contact</p> -->
+                <a href="login">
+                    <span class="mr-1 hover:text-[#B76E79] cursor-pointer font-semibold block">Login</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- HERO containt  -->
+        <!-- Swiper -->
+        <div class="swiper mySwiper text-white select-none">
+            <div class="swiper-wrapper text-white">
+                <div class="slide1 relative swiper-slide lg:h-[608px] h-screen bg-black grid items-center">
+
+                    <!--
+                              <div class="w-full flex flex-col items-center absolute top-0 select-none">
+                                <img src="~/img/navdownlight.jpg" alt="" class="w-full h-[120px]" />
+
+                              </div> -->
+
+                    <div class="relative ">
+                        <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
+
+                    </div>
+
+
+                    <div class="grid lg:grid-cols-2 z-[11] grid-cols-1 justify-center items-center">
+                        <div class="flex flex-col gap-y-5  items-start md:px-20 px-10 md:py-0 py-5 justify-center   text-white">
+                            <div class="">
+                                <p class="md:text-4xl text-2xl uppercase leading-snug tracking-widest">
+                                    Welcome To
+                                </p>
+                                <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                    AM DIAM
+                                </p>
+
+                            </div>
+
+                            <div class="flex gap-5">
+                                <a href="contact" class="button2  px-5 py-1 border border-white">
+                                    Contact
+                                </a>
+                                <a href="education1" class="flex gap-3  items-center">
+                                    <p class="text-[#C6C6C6]">Gallery</p>
+                                    <i class="fas text-white fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="flex justify-center">
+
+                                <img src="~/img/welcome.gif" type="video/mp4" class="lg:h-[450px] lg:w-[400px] h-[250px] w-[200px] flex   items-center justify-center py-5 rounded-full" />
+                                <!-- <video
+                                  autoplay
+                                  muted
+                                  loop
+                                  class="lg:h-[300px] lg:w-[300px] h-[200px] w-[200px] flex  mt-24 items-center justify-center py-5 rounded-full"
+                                >
+
+
+                                  Your browser does not support the video tag.
+                                </video> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide2 swiper-slide lg:h-[608px] h-screen w-full bg-black grid items-center">
+                    <!-- <img
+                      src="~/img/background2.jpg"
+                      alt=""
+                      class="absolute z-[1111111111111] bottom-0 left-0 "
+                    /> -->
+                    <div class="relative ">
+                        <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
+
+                    </div>
+
+                    <div class="grid z-[11] lg:grid-cols-2 grid-cols-1">
+                        <div class="flex flex-col gap-y-5   items-start md:px-20 px-10 md:py-0 py-5 justify-center   text-white">
+                            <div class="">
+                                <p class="text-xl uppercase leading-snug tracking-widest">
+                                    Our Principle
+                                </p>
+                                <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                    Client <br>
+                                    Satisfaction
+                                </p>
+                            </div>
+
+                            <div class="flex gap-5 ">
+                                <a href="~/Services/services/service1" class="button2  px-5 py-1 border border-white">
+                                    Sell Diamonds
+                                </a>
+
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <div class="flex items-center justify-center">
+                                <video autoplay
+                                       muted
+                                       loop
+                                       class="lg:h-[450px] lg:w-[400px] h-[200px] w-[200px] flex items-center   justify-center py-5 rounded-full">
+                                    <source src="~/img/2.mp4"
+                                            type="video/mp4" />
+
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide3 swiper-slide lg:h-[608px] bg-black h-screen grid items-center">
+                    <!-- <img
+                      src="~/img/slide3.png"
+                      alt=""
+                      class="absolute z-[-1]  h-screen md:object-cover object-right-bottom object-cover"
+                    /> -->
+                    <div class="relative ">
+                        <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
+
+                    </div>
+                    <div class="grid lg:grid-cols-2 z-[11] grid-cols-1 items-center justify-center text-white">
+                        <div class="flex flex-col md:px-20 px-5 gap-y-5 md:py-0 py-5 items-start text-white">
+                            <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                Brilliance
+                            </p>
+                            <p class="max-w-[390px]">
+                                Shop 100% Natural, Ideal-Cut Certified Diamonds
+                            </p>
+
+                            <div class="flex gap-5">
+                                <a href="~/Services/service" class="button2  px-5 py-1 text-lg border border-white">
+                                    Browse Collection
+                                </a>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="flex items-center justify-center">
+                                <video autoplay
+                                       muted
+                                       loop
+                                       class="lg:h-[450px] lg:w-[400px] h-[200px] w-[200px] flex items-center   justify-center py-5 rounded-full">
+                                    <source src="~/img/3.mp4" type="video/mp4" />
+
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide4 swiper-slide lg:h-[608px] bg-black h-screen grid items-center">
+                    <!-- <img
+                      src="~/img/navdownlight.jpg"
+                      alt=""
+                      class="w-screen md:h-1/2 h-2/3 absolute top-0 z-[-1]"
+                    /> -->
+
+
+                    <div class="relative ">
+                        <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
+
+                    </div>
+                    <div class="grid lg:grid-cols-2 grid-cols-1 z-[11] justify-center items-center">
+                        <div class="flex flex-col gap-y-5 md:px-20 px-10 md:py-0 py-5 justify-center text-white">
+                            <div class="">
+                                <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                    Invest
+                                </p>
+                                <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                    Today
+                                </p>
+                            </div>
+                            <p class=" max-w-[390px]">
+                                Due to their characteristics and their scarcity,diamonds have
+                                always been a sound investment
+                            </p>
+
+                            <div class="flex gap-5">
+                                <a href="~/Services/service9" class="button2  px-5 py-1 text-lg border border-white">
+                                    Invest Today
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="flex items-center md:py-0 py-10 justify-center">
+                          <img
+                            src="~/img/slide4.png"
+                            alt=""
+                            class="md:h-full md:-w-full h-1/2 w-1/2"
+                          />
+                        </div> -->
+                        <div class="">
+                            <div class="flex items-center justify-center">
+                                <video autoplay
+                                       muted
+                                       loop
+                                       class="lg:h-[400px] lg:w-[400px] h-[200px] w-[200px] flex items-center  justify-center py-5 rounded-full">
+                                    <source src="~/img/4.mp4" type="video/mp4" />
+
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide6 swiper-slide lg:h-[608px] bg-black h-screen grid items-center">
+
+                    <div class="relative ">
+                        <img src="~/img/light.png" alt="" class="w-screen max-h-[80px]" />
+
+                    </div>
+                    <div class="grid lg:grid-cols-2 z-[11] grid-cols-1 gap-y-10">
+                        <div class="flex flex-col gap-y-5 md:px-20 px-10 md:py-0 py-5 justify-center text-white">
+                            <div class="flex flex-col items-start">
+                                <div class="flex flex-col gap-y-5">
+                                    <div class="uppercase">
+                                        <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                            Easy
+                                        </p>
+                                        <p class="md:text-6xl text-4xl font-semibold uppercase tracking-widest">
+                                            Sourcing
+                                        </p>
+                                    </div>
+                                    <p class="max-w-[390px]">
+                                        Looking for an easy way to
+                                        source your Diamonds online?
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <a href="~/Services/service2"
+                                   class="button2  px-5 py-1 text-lg border border-white w-fit">
+                                    Learn More
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="">
+
+                            <div class="flex justify-center">
+                                <img src="~/img/easy.gif" type="video/mp4" class="lg:h-[450px] lg:w-[400px] h-[250px] w-[200px] flex   items-center justify-center py-5 rounded-full" />
+
+                            </div>
+
+
+                        </div>
+
+                        <!-- <div class="col-span-2">
+                          <img
+                            src="~/img/img2slide5.png"
+                            alt=""
+                            class="absolute bottom-0 right-0"
+                          />
+                          <img
+                            src="~/img/imgslide5.png"
+                            alt=""
+                            class="fixed right-24 bottom-0 z-[111] md:h-auto md:w-auto h-[30%]"
+                          />
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-button-next" style="font-size: 12px"></div>
+            <div class="swiper-button-prev" style="font-size: 12px"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- main containt  -->
+
+        <div class="flex flex-col justify-center items-center  lg:my-20 my-10 ">
+            <div class="">
+                <p class="text-white uppercase font-bold md:text-3xl text-xl lg:mb-20 mb-10 text-center">
+                    Our Services
+                </p>
+
+                <!-- service cards  -->
+                <div class="grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7  text-white">
+                    <div class="card p-5 flex flex-col items-center h-[280px] w-[255px]">
+                        <img src="~/img/dollar.png" alt="" class="h-[60px] w-[60px]" />
+                        <p class="py-3 text-lg">BUYING SERVICE</p>
+                        <p class="text-[#C6C6C6] text-center">
+                            Recycled, polished, loose, second-hand, we buy any shape & grades!
+                        </p>
+
+                        <a class="py-5" href="~/Services/service">
+                            <button class="button px-5 py-1 uppercase text-base border border-white">
+                                Sell Now
+                            </button>
+                        </a>
+                    </div>
+                    <div class="card p-5 flex flex-col items-center h-[280px] w-[255px]">
+                        <img src="~/img/share.png" alt="" class="h-[60px] w-[60px]" />
+                        <p class="py-3 text-lg">SOURCING SERVICE</p>
+                        <p class="text-[#C6C6C6] text-center">
+                            We help you source your diamonds online, the easiest way possible!
+                        </p>
+
+                        <a class="py-5" href="~/Services/service2">
+                            <button class="button uppercase px-5 py-1 text-base border border-white">
+                                SOURCE IT!
+                            </button>
+                        </a>
+                    </div>
+                    <div class="card p-5 flex flex-col items-center h-[280px] w-[255px]">
+                        <img src="~/img/cart.png" alt="" class="h-[60px] w-[60px]" />
+                        <p class="py-3 text-lg">SELLING SERVICE</p>
+                        <p class="text-[#C6C6C6] text-center">
+                            Purchase High Quality, Manufactured Diamonds through AM Diam!
+                        </p>
+
+                        <a class="py-5" href="~/Services/services/service1">
+                            <button class="button uppercase px-5 py-1 text-base border border-white">
+                                BUY NOW!
+                            </button>
+                        </a>
+                    </div>
+                    <div class="card p-5 flex flex-col items-center h-[280px] w-[255px]">
+                        <img src="~/img/dimond.png" alt="" class="h-[60px] w-[60px]" />
+                        <p class="py-3 text-lg">MANUFACTURING</p>
+                        <p class="text-[#C6C6C6] text-center">
+                            We Manufacture ideally processed Diamonds of utmost Quality!
+                        </p>
+
+                        <a class="py-5" href="~/Services/service5">
+                            <button class="button uppercase px-5 py-1 text-base border border-white">
+                                TELL ME MORE!
+                            </button>
+                        </a>
+                    </div>
+                    <div class="card p-5 flex flex-col items-center h-[280px] w-[255px]">
+                        <img src="~/img/chart.png" alt="" class="h-[60px] w-[60px]" />
+                        <p class="py-3 text-lg">INVESTMENT</p>
+                        <p class="text-[#C6C6C6] text-center">
+                            Diamonds are popular for being a very safe investment, why wait?
+                        </p>
+
+                        <a class="py-5" href="~/Services/service9">
+                            <button class="button uppercase px-5 py-1 text-base border border-white">
+                                Invest!
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- <div class="grid lg:grid-cols-2 grid-cols-1 gap-20 py-5 text-white">
+
+            </div> -->
+        </div>
+
+        <div class="relative">
+            <img src="~/img/navdownlight.jpg"
+                 alt=""
+                 class="lighttext w-screen" />
+
+            <!-- about section  -->
+
+            <div class="grid lg:grid-cols-3 grid-cols-1 xl:mt-[-170px] lg:mt-[-100px] md:mt-[-50px] md:gap-20 gap-10 my-5 md:px-20 px-10">
+                <div class="flex items-center justify-center">
+                    <img src="~/img/aboutlogo.png" alt="" class="h-1/2 w-auto" />
+                </div>
+                <div class="col-span-2 flex flex-col gap-y-10  md:items-center lg:items-start justify-center ">
+                    <div class="">
+                        <p class="text-[#E4E2E2] font-normal w-3/4">
+                            Our team at A M DIAM is made up of international diamond andp]
+                            colored gemstone specialists. We are specialized in cutting and
+                            polishing rough diamonds as well as in manufacturing high-end
+                            finished jewellery.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 lg:gap-20 gap-10  ">
+                        <div class="flex flex-col gap-y-4 justify-start">
+                            <p class="text-lg text-white">WE MANUFACTURE IN:</p>
+
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/bel.png"
+                                     alt=""
+                                     class="h-[20px] w-[20px]" />
+                                <p class="font-semibold">BELGIUM</p>
+                            </div>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/hong.png"
+                                     alt=""
+                                     class="h-[20px] w-[20px]" />
+                                <p class="font-semibold">HONG KONG</p>
+                            </div>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/india.png"
+                                     alt=""
+                                     class="h-[18px] w-[20px]" />
+                                <p class="font-semibold">INDIA</p>
+                            </div>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/uae.png"
+                                     alt=""
+                                     class="h-[18px] w-[20px]" />
+                                <p class="font-semibold">U.A.E</p>
+                            </div>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/usa.png"
+                                     alt=""
+                                     class="h-[18px] w-[20px]" />
+                                <p class="font-semibold">U.S.A</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-y-5 justify-start">
+                            <p class="text-lg text-white">WHAT WE OFFER:</p>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/dimondround.png"
+                                     alt=""
+                                     class="h-[18px] w-[18px]" />
+                                <p class="">High-end finished <br />jewelry.</p>
+                            </div>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/dimondround.png"
+                                     alt=""
+                                     class="h-[18px] w-[18px]" />
+                                <p class="">
+                                    Cutting and polishing <br />
+                                    diamonds.
+                                </p>
+                            </div>
+                            <div class="flex text-white text-sm items-center gap-3">
+                                <img src="~/img/dimondround.png"
+                                     alt=""
+                                     class="h-[18px] w-[18px]" />
+                                <p class="">
+                                    Polishing colour <br />
+                                    stones.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- news later  -->
+        </div>
+
+        <div class="flex flex-col lg:mx-10 md:mx-5 mx-0 justify-between items-center py-7 my-5 md:px-20 px-5">
+            <div class="newslater lg:h-[120px] w-full items-center gap-5 justify-between p-5 flex md:px-10 my-10">
+                <p class="text-2xl font-bold">Subscribe to Our Newsletter</p>
+                <div class="flex flex-col items-center">
+                    <div class="lg:flex items-center gap-3">
+                        <input type="text"
+                               class="h-[50px] rounded-md px-3"
+                               placeholder="Your E-mail" />
+                        <a href="~/Home/Index">
+                            <button class="h-[50px] px-5 my-2 rounded-md border hover:border-2 border-[#B76E79]">
+                                Subscribe
+                            </button>
+                        </a>
+                    </div>
+                    <p class="text-sm text-[#E9E9E9]">
+                        Discover the latest collections, news and exclusive launches.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer section  -->
+
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-10 w-full lg:px-40 px-20 py-10 mt-20 justify-items-center">
+            <div class="flex flex-col gap-y-7 ">
+                <div class="flex flex-col">
+                    <p class="text-[#B76E79] font-semibold">AM DIAM DMCC</p>
+                    <p class="py-2 text-white">is represented by:</p>
+                </div>
+                <div class="">
+                    <p class="text-[#B76E79] font-semibold">Headquarters</p>
+                    <a href="" target="_blank" class="flex gap-3 py-3 ">
+                        <i class="fas fa-solid fa-location-dot text-xl text-white"></i>
+
+
+                        <p class="text-white hover:text-[#B76E79]">
+                            46 A, ALMAS TOWER  <br>
+                            JLT P.O. Box: 376531,  <br>
+                            Dubai UAE
+                        </p>
+                    </a>
+
+                    <a href="tel:+97145299683" class="flex gap-3 py-3">
+                        <i class="fas fa-regular fa-phone text-white text-xl"></i>
+                        <p class="text-lg text-white hover:text-[#B76E79]">+971 4 529 9683</p>
+                    </a>
+
+
+
+
+                    <div class="flex   gap-3 py-3">
+                        <i class="fas fa-solid fa-envelope text-white text-xl"></i>
+                        <div class="flex flex-col gap-y-2">
+                            <a href="mailto: accounts@amdiamdmcc.com" target="_blank">
+                                <p class="text-white  hover:text-[#B76E79] text-lg">accounts@amdiamdmcc.com</p>
+                                <a href="mailto: info@amdiamdmcc.com" target="_blank"><p class="text-white  hover:text-[#B76E79] text-lg">info@amdiamdmcc.com</p> </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex flex-col ">
+                <div class="flex items-start">
+                    <p class="text-white font-semibold text-xl pb-7">Quick Links</p>
+                </div>
+                <div class="flex flex-col gap-y-4">
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="~/Services/service"><p class="text-[#E9E9E9] hover:text-[#B76E79]">DIAMOND BUYING</p></a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="~/Services/service2">
+                            <p class="text-[#E9E9E9] hover:text-[#B76E79]">DIAMOND SOURCING</p>
+                        </a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="~/Services/services/service1"><p class="text-[#E9E9E9] hover:text-[#B76E79]">DIAMOND SELLING</p></a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="~/Services/service5">
+                            <p class="text-[#E9E9E9] hover:text-[#B76E79]">MANUFACTURING</p>
+                        </a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="~/Services/service9"><p class="text-[#E9E9E9] hover:text-[#B76E79]">INVESTMENT DIAMOND</p></a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="education1"><p class="text-[#E9E9E9] hover:text-[#B76E79]">4C OF DIAMOND</p></a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="~/Home/About"> <p class="text-[#E9E9E9] hover:text-[#B76E79]">ABOUT US</p></a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="career"><p class="text-[#E9E9E9] hover:text-[#B76E79]">CAREER</p></a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <i class="fas text-white fa-solid fa-chevron-right"></i>
+                        <a href="contact"><p class="text-[#E9E9E9] hover:text-[#B76E79]">CONTACT</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col ">
+                <p class="text-white font-semibold text-xl pb-7">Social Platform</p>
+
+                <div class="flex flex-col gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=100095627850378" target="_blank"
+                       class="flex gap-3 text-white hover:text-[#B76E79]">
+                        <i class="fa-brands fa-facebook text-xl"></i>
+                        <p class="">Facebook</p>
+                    </a>
+                    <a href="~/Home/Index"
+                       class="flex gap-3 text-white hover:text-[#B76E79]">
+                        <i class="fa-brands fa-pinterest text-xl"></i>
+                        <p class="">Pinterest</p>
+                    </a>
+                    <a href="https://www.instagram.com/amdiamdmcc/" target="_blank"
+                       class="flex gap-3 text-white hover:text-[#B76E79]">
+                        <i class="fa-brands fa-instagram text-xl"></i>
+                        <p class="">Instagram</p>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCXSNlDCCia8tjEXbMTgH9uQ" target="_blank"
+                       class="flex gap-3 text-white hover:text-[#B76E79]">
+                        <i class="fa-brands fa-youtube text-xl"></i>
+                        <p class="">Youtube</p>
+                    </a>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="py-3 bg-[#24101B] px-20">
+        <p class="text-white font-medium">
+            AM Diam | Copyrights © 2023 All Rights Reserved
+        </p>
+    </div>
+
+    <!-- navbar javascript  -->
+    <script>
+        const button = document.querySelector("#menu-button");
+        const menu = document.querySelector("#menu");
+
+        button.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+
+            spaceBetween: 30,
+            centeredSlides: true,
+            // autoplay: {
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // },
+        });
+
+        // // Pause autoplay on mouseenter
+        // swiper.el.addEventListener("mouseenter", function () {
+        //   swiper.autoplay.stop();
+        // });
+
+        // // Resume autoplay on mouseleave
+        // swiper.el.addEventListener("mouseleave", function () {
+        //   swiper.autoplay.start();
+        // });
+    </script>
+
+    <!-- Tailwindcss Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          theme: {
+            extends: {
+              fontFamily: {
+                poppins: ["Poppins"],
+              },
+              screens: {
+                @*sm: "640px",
+                // => @media (min-width: 640px) { ... }
+
+                md: "768px",
+                // => @media (min-width: 768px) { ... }
+
+                lg: "1024px",
+                // => @media (min-width: 1024px) { ... }
+
+                xl: "1280px",
+                // => @media (min-width: 1280px) { ... }
+
+                "2xl": "1536px",
+                // => @media (min-width: 1536px) { ... }*@
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- JS File -->
+    <script src=".~/js/main.js"></script>
+</body>
+</html>
