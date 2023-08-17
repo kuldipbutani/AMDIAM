@@ -13,7 +13,7 @@ namespace AMDIAM.Controllers
         {
             return View();
         }
-        public ActionResult ~/Services/service1()
+        public ActionResult service1()
         {
             return View();
         }
@@ -49,7 +49,7 @@ namespace AMDIAM.Controllers
         {
             return View();
         }
-        public ActionResult ~/Services/service10()
+        public ActionResult service10()
         {
             return View();
         }

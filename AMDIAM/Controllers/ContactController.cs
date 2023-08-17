@@ -6,30 +6,26 @@ using System.Web.Mvc;
 
 namespace AMDIAM.Controllers
 {
-    public class EducationController : Controller
+    public class ContactController : Controller
     {
-        // GET: Education
-        public ActionResult education1()
+        // GET: Contact
+        public ActionResult Contact()
         {
             return View();
         }
-        public ActionResult education2()
+        public ActionResult career()
         {
             return View();
         }
-        public ActionResult education3()
+        public ActionResult signup()
         {
             return View();
         }
-        public ActionResult education4()
+        public ActionResult login()
         {
             return View();
         }
-        public ActionResult education5()
-        {
-            return View();
-        }
-        public ActionResult education6()
+        public ActionResult forgotpassword()
         {
             return View();
         }
