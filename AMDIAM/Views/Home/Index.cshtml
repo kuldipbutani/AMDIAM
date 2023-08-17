@@ -10,8 +10,8 @@
 
     <!-- tailwinds css  -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src=".~/js/tailwind.config.js"></script>
-
+    <script src="~/js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins"
           rel="stylesheet" />
 
@@ -24,7 +24,7 @@
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
     <!-- css style  -->
     <link rel="stylesheet" href="~/css/style.css" />
 
@@ -33,6 +33,11 @@
         .swiper-pagination-bullet-active {
             background-color: #fff; /* Active bullet background color */
             color: #fff; /* Active bullet text color */
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 0px;
         }
 
         .swiper-pagination-bullet {
@@ -206,7 +211,7 @@
                         style="width: max-content">
                         <li class="">
                             <a class="rounded-t-lg bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
-                              href"~/contact/contact">CONTACT US</a>
+                               href="~/contact/contact">CONTACT US</a>
                         </li>
                         <li class="">
                             <a class="bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap"
@@ -265,13 +270,13 @@
                             </div>
 
                             <div class="flex gap-5">
-                                <ahref"~/contact/contact" class="button2  px-5 py-1 border border-white">
+                                <a href="~/contact/contact" class="button2  px-5 py-1 border border-white">
                                     Contact
-                                </a>
-                                <a href="~/education/education1" class="flex gap-3  items-center">
-                                    <p class="text-[#C6C6C6]">Gallery</p>
-                                    <i class="fas text-white fa-solid fa-arrow-right"></i>
-                                </a>
+                                    </a>
+                                    <a href="~/education/education1" class="flex gap-3  items-center">
+                                        <p class="text-[#C6C6C6]">Gallery</p>
+                                        <i class="fas text-white fa-solid fa-arrow-right"></i>
+                                    </a>
                             </div>
                         </div>
 
@@ -679,19 +684,21 @@
             <div class="newslater lg:h-[120px] w-full items-center gap-5 justify-between p-5 flex md:px-10 my-10">
                 <p class="text-2xl font-bold">Subscribe to Our Newsletter</p>
                 <div class="flex flex-col items-center">
-                    <div class="lg:flex items-center gap-3">
-                        <input type="text"
-                               class="h-[50px] rounded-md px-3"
-                               placeholder="Your E-mail" />
-                        <a href="~/Home/Index">
-                            <button class="h-[50px] px-5 my-2 rounded-md border hover:border-2 border-[#B76E79]">
+                    <form method="post" name="myForm" id="myForm">
+                        <div class="lg:flex items-center gap-3">
+                            <input type="email" id="email" name="email" 
+                                   class="h-[50px] rounded-md px-3"
+                                   placeholder="Your E-mail" />
+                            @*<a href="~/Home/Index">*@
+                            <button type="submit" class="h-[50px] px-5 my-2 rounded-md border hover:border-2 border-[#B76E79]">
                                 Subscribe
                             </button>
-                        </a>
-                    </div>
-                    <p class="text-sm text-[#E9E9E9]">
-                        Discover the latest collections, news and exclusive launches.
-                    </p>
+                            @*</a>*@
+                        </div>
+                        <p class="text-sm text-[#E9E9E9]">
+                            Discover the latest collections, news and exclusive launches.
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -779,7 +786,7 @@
                     </div>
                     <div class="flex gap-3 items-center">
                         <i class="fas text-white fa-solid fa-chevron-right"></i>
-                        <ahref"~/contact/contact"><p class="text-[#E9E9E9] hover:text-[#B76E79]">CONTACT</p></a>
+                        <a href="~/contact/contact"><p class="text-[#E9E9E9] hover:text-[#B76E79]">CONTACT</p></a>
                     </div>
                 </div>
             </div>
@@ -820,7 +827,79 @@
             AM Diam | Copyrights © 2023 All Rights Reserved
         </p>
     </div>
+    <script>
 
+        $(function () {
+            $("form[name='myForm']").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        minlength: 2
+                    }
+                },
+                messages: {
+                    email: {
+                        required: "Please enter a email",
+                        minlength: "Your email must consist of at least 2 characters",
+                    }
+                },
+                submitHandler: function (form) {
+                    submitFormViaEmail();
+                }
+            });
+            $.validator.addMethod('noemail', function (value) {
+                return /^([\w-.]+@@(?!gmail\.com)(?!yahoo\.com)(?!hotmail\.com)(?!mail\.ru)(?!yandex\.ru)(?!mail\.com)([\w-]+.)+[\w-]{2,4})?$/.test(value);
+            }, 'Free email addresses are not allowed.');
+        });
+
+
+       function submitFormViaEmail() {
+            const form = document.getElementById('myForm');
+            const recipientEmail = 'no-reply@rushkar.com';
+            const TorecipientEmail = 'securiproactive@gmail.com';
+           const emailSubject = 'Subscribe to Newsletter';
+
+            // Build the email body with form data
+            const email = form.querySelector('#email').value;
+            const emailBody = `Email: ${email}`;
+            var api_key = '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'; // Replace with your actual SendGrid API key
+
+            // Make the AJAX POST request
+            $.ajax({
+                type: "POST",
+                //url: "Home/SendEmailViaSendGrid",
+                url: '@Url.Action("SendEmailViaSendGrid", "Home")',
+                async: true,
+                data: { receiverEmail: TorecipientEmail, subject: emailSubject, body: emailBody },
+                success: function (response) {
+                    console.log("Email sent successfully:", response);
+                    //document.getElementById("myModal").classList.add("hidden");
+                    //$('#myModal').modal('hide');
+                   // document.getElementById("myModal").classList.add("hidden");
+                    Swal.fire(
+                        'Success',
+                        'Email Send Successfully!',
+                        'success'
+                    )
+                },
+                error: function (error) {
+                    console.log("Error sending email:", error);
+                    // Handle the error response here (if needed)
+                    //$('#myModal').modal('hide');
+                    ////document.getElementById("myModal").classList.add("hidden");
+                    Swal.fire(
+                        'Error',
+                        'an error occurred',
+                        'error'
+                    )
+                }
+            });
+        }
+
+
+        // Email validation helper function
+        
+    </script>
     <!-- navbar javascript  -->
     <script>
         const button = document.querySelector("#menu-button");
@@ -897,6 +976,6 @@
     </script>
 
     <!-- JS File -->
-    <script src=".~/js/main.js"></script>
+    <script src="~/js/main.js"></script>
 </body>
 </html>

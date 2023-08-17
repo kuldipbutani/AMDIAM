@@ -11,7 +11,7 @@
     <!-- tailwinds css  -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="~/js/tailwind.config.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Fontawesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -21,11 +21,16 @@
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
 
     <!-- css style  -->
     <link rel="stylesheet" href="~/css/style.css" />
 
     <style>
+        .error {
+            color: red;
+            margin-bottom: 0px;
+        }
         /* CSS for active item */
         .active-item {
             background: linear-gradient(90deg, #CA6B9D 0%, rgba(4, 2, 20, 0.38) 100%);
@@ -150,46 +155,46 @@
         <div class="flex items-center justify-start flex-col  text-white">
 
             <div class="flex flex-col gap-y-7 items-start justify-start">
-
-                <div class=""><p class="text-3xl font-semibold">SEND US AN EMAIL</p></div>
-
-
-
-                <div class="flex flex-col gap-y-3">
-                    <label for="" class="text-base font-semibold">NAME *</label>
-                    <input type="text" class="py-3 px-3 text-black md:w-[460px] w-[300px] rounded" />
-                </div>
-                <div class="flex flex-col gap-y-3">
-                    <label for="" class="text-base font-semibold">EMAIL *</label>
-                    <input type="email" class="py-3 px-3 text-black md:w-[460px] w-[300px] rounded " />
-                </div>
-                <div class="flex flex-col gap-y-3">
-                    <label for="" class="text-base font-semibold">PHONE *</label>
-                    <input type="tel" class="py-3 px-3 text-black md:w-[460px] w-[300px] rounded" />
-                </div>
-
-                <div class="flex flex-col gap-y-3">
-                    <label for="" class="text-base font-semibold">SERVICES *</label>
-
-                    <select id="dropdown" name="dropdown" class="block py-3 px-3 text-black  bg-white  md:w-[460px] w-[300px] rounded ">
-                        <option value="option1">Select One </option>
-                        <option value="option2">Option 2</option>
-                        <option value="option3">Option 3</option>
-                    </select>
-                </div>
-
-                <div class="flex flex-col gap-y-3">
-                    <label for="" class="text-base font-semibold">MESSAGE: *</label>
-                    <textarea name="" id="" class="py-3 px-3 text-black  md:w-[460px] w-[300px] rounded" cols="" rows="3"></textarea>
-                </div>
+                <form method="post" name="myForm" id="myForm">
+                    <div class=""><p class="text-3xl font-semibold">SEND US AN EMAIL</p></div>
 
 
-                <div class="flex justify-start ">
-                    <button class="px-6 py-3 text-lg border border-[#B76E79] rounded-xl">
-                        Submit Form
-                    </button>
-                </div>
 
+                    <div class="flex flex-col gap-y-3 mt-4">
+                        <label for="" class="text-base font-semibold">NAME *</label>
+                        <input type="text" id="Name" name="Name" class="py-3 px-3 text-black md:w-[460px] w-[300px] rounded" />
+                    </div>
+                    <div class="flex flex-col gap-y-3 mt-2">
+                        <label for="" class="text-base font-semibold">EMAIL *</label>
+                        <input type="email" id="email" name="email" class="py-3 px-3 text-black md:w-[460px] w-[300px] rounded " />
+                    </div>
+                    <div class="flex flex-col gap-y-3 mt-2">
+                        <label for="" class="text-base font-semibold">PHONE *</label>
+                        <input type="tel" id="phone" name="phone" class="py-3 px-3 text-black md:w-[460px] w-[300px] rounded" />
+                    </div>
+
+                    <div class="flex flex-col gap-y-3 mt-2">
+                        <label for="" class="text-base font-semibold">SERVICES *</label>
+
+                        <select id="dropdown" name="dropdown" class="block py-3 px-3 text-black  bg-white  md:w-[460px] w-[300px] rounded ">
+                            <option value="option1">Select One </option>
+                            <option value="option2">Option 2</option>
+                            <option value="option3">Option 3</option>
+                        </select>
+                    </div>
+
+                    <div class="flex flex-col gap-y-3 mt-2">
+                        <label for="" class="text-base font-semibold">MESSAGE: *</label>
+                        <textarea name="message" id="message" class="py-3 px-3 text-black  md:w-[460px] w-[300px] rounded" cols="" rows="3"></textarea>
+                    </div>
+
+
+                    <div class="flex justify-start  mt-4">
+                        <button type="submit" class="px-6 py-3 text-lg border border-[#B76E79] rounded-xl">
+                            Submit Form
+                        </button>
+                    </div>
+                </form>
 
             </div>
 
@@ -321,17 +326,117 @@
         </p>
     </div>
 
+    <script>
 
+        $(function () {
+            $("form[name='myForm']").validate({
+                rules: {
+                    email: {
+                        required: true,
+                        minlength: 2
+                    },
+                    Name: {
+                        required: true
+                    },
+                    phone: {
+                        required: true
+                    },
+                    dropdown: {
+                        required: true
+                    }
+                },
+                messages: {
+                    email: {
+                        required: "Please enter a email",
+                        minlength: "Your email must consist of at least 2 characters"
+                    }, Name: {
+                        required: "Please enter a name",
+                    }, phone: {
+                        required: "Please enter a company",
+                    }, dropdown: {
+                        required: "Please select service",
+                    }
+                },
+                submitHandler: function (form) {
+                    console.log('test');
+                    submitFormViaEmail();
+                }
+            });
+            
+        });
+
+
+        function getFormDataString(form) {
+            const formData = new FormData(form);
+            return Array.from(formData.entries())
+                .map(([key, value]) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
+                .join('&');
+        }
+
+        // Function to open the default email application and pre-fill the data
+        function submitFormViaEmail() {
+            const form = document.getElementById('myForm');
+            const recipientEmail = 'no-reply@rushkar.com';
+            const TorecipientEmail = 'kuldip.soboft@gmail.com';
+            //const TorecipientEmail = 'securiproactive@gmail.com';
+            const emailSubject = 'Get an Account';
+
+            // Build the email body with form data
+            const name = form.querySelector('#Name').value;
+            const phone = form.querySelector('#phone').value;
+            const email = form.querySelector('#email').value;
+            const dropdown = form.querySelector('#dropdown').value;
+            const message = form.querySelector('#message').value;
+            const emailBody = `Name: ${name}, \n Phone: ${phone} , \n Email: ${email} , \n Service: ${dropdown} , \n Message: ${message}`;
+            var api_key = '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'; // Replace with your actual SendGrid API key
+
+            // Make the AJAX POST request
+            $.ajax({
+                type: "POST",
+                //url: "Home/SendEmailViaSendGrid",
+                url: '@Url.Action("SendEmailViaSendGrid", "Home")',
+                async: true,
+                data: { receiverEmail: TorecipientEmail, subject: emailSubject, body: emailBody },
+                success: function (response) {
+                    console.log("Email sent successfully:", response);
+                    //document.getElementById("myModal").classList.add("hidden");
+                    $('#Name').val('');
+                    $('#phone').val('');
+                    $('#email').val('');
+                    $('#dropdown').val('');
+                    $('#message').val('');
+                    //document.getElementById("myModal").classList.add("hidden");
+                    Swal.fire(
+                        'Success',
+                        'Email Send Successfully!',
+                        'success'
+                    )
+                },
+                error: function (error) {
+                    console.log("Error sending email:", error);
+                    // Handle the error response here (if needed)
+                    //$('#myModal').modal('hide');
+                    ////document.getElementById("myModal").classList.add("hidden");
+                    Swal.fire(
+                        'Error',
+                        'an error occurred',
+                        'error'
+                    )
+                }
+            });
+        }
+
+    </script>
 
 
     <!-- navbar javascript  -->
     <script>
-    const button = document.querySelector("#menu-button");
-    const menu = document.querySelector("#menu");
+        const button = document.querySelector("#menu-button");
+        const menu = document.querySelector("#menu");
 
-    button.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
+        button.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
     </script>
 
     <!-- Tailwindcss Config -->
